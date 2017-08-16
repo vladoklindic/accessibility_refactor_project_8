@@ -1,0 +1,356 @@
+/* Global Layout Set-up */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff; 
+  background: #633a48;
+}
+
+/* Link Styles */
+
+a {
+  text-decoration: none;
+  color: #fff;
+
+}
+
+a:hover:not(.buy a) {
+  color: #ffee68;
+}
+
+/* Section Styles */
+
+.main-nav {
+  width: 100%;
+  background: rgba(45, 43, 48, 0.8);
+  min-height: 30px;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav .name {
+  display: block;
+  margin-right: auto;
+  color: white;
+  letter-spacing: 5px;
+}
+
+.nav li {
+  padding: 5px 10px 10px 10px;
+}
+
+.nav a {
+  transition: all .5s;
+}
+
+.nav a:hover {
+  color: #ffee68;
+}
+
+header {
+  text-align: center;
+  background: url('../img/concert02_no_text.jpg') no-repeat top center ;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 60px;
+  height: 350px;
+}
+
+header h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+  padding-top: 10px;
+  margin-bottom: 0;
+  color: #633a48;
+}
+
+header h3 {
+  font-size: 1.5em;
+  text-transform: lowercase;
+  color: #633a48;
+}
+
+.tag {
+  color: black;
+  padding: 10px;
+  letter-spacing: 5px;
+}
+
+.name{
+  font-weight: 300;
+}
+
+header .name{
+  font-size: 3em;
+}
+.tagline {
+  font-weight: 600;
+  padding: 20px;
+  text-transform: uppercase;
+  color: #ffee68
+}
+
+.card {
+  margin: 30px;
+  padding: 20px 40px 40px;
+  text-align: left;
+  border-top: 4px solid #ffee68;
+  clear: both;
+}
+
+.card:hover,
+.tour:hover {
+  border-color: #30ff97;
+}
+
+
+.photo{
+  display: block;
+  width: 200px;
+  height: 0%;
+  margin: 0 auto;
+}
+
+.information{
+  width: 100%;
+  text-align: center;
+  /*display: inline-block;
+  position: absolute;*/
+}
+
+.heading{
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #ffee68;
+  margin-top: 10px;
+}
+
+.buy:hover {
+  color: #30ff97;
+  transition: all .5s ease-in-out;
+}
+
+.tour {
+  margin: 10px;
+  padding: 10px 0;
+  text-align: center;
+  border-top: 4px solid #ffee68;
+  clear: both;
+}
+
+table {
+  margin: 0 auto;
+}
+
+th, td {
+    padding: 4px 8px;
+  }
+
+th {
+    color: #ffee68;
+  }
+
+tr:nth-child(odd) {
+    color: #30ff97;
+}
+
+.survey label {
+  display: block;
+  margin: 1.6em 0 .4em;
+}
+
+#favmember {
+  margin-bottom: 0;
+}
+
+textarea + p {
+  margin: .5em 0 4em;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  padding: 2px;
+  border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  background: #30ff97;
+  transition: all .4s ease-in;
+}
+
+input[type="radio"] {
+  vertical-align: middle;
+}
+
+input[type="radio"] + label {
+  display: inline-block;
+  vertical-align: -2px; 
+  margin-left: .2em;
+}
+
+legend {
+  color: #ffee68;
+  font-size: 1.2em;
+  margin-bottom: 2em; 
+}
+
+label + input[type="text"],
+label + input[type="email"] {
+  margin-left: .4em;
+  padding: .4em;
+}
+
+
+fieldset {
+  display: block;
+  border: none;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  padding: .4em;
+  width: 40%;
+  border-radius: 5px;
+  background-color: #30ff97; 
+  border: none;
+}
+
+.descPara,
+button + p {
+  font-size: .6em;
+}
+
+
+/* Footer styles */
+
+footer {
+  width: 100%;
+  min-height: 30px;
+  padding: 20px 0 40px 20px;
+}
+
+footer .copyright {
+  top: -8px;
+  font-size: .75em;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+a.social {
+  display: inline-block;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: .4;
+  transition: all .5s;
+}
+
+a.social:hover {
+  opacity: 1;
+}
+.clearfix {
+  clear: both;
+}
+
+/* Styles for larger screens */
+
+@media screen and (min-width: 840px) {
+
+  .flex {
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: flex;
+    max-width: 1200px;
+    -ms-flex-pack: distribute;
+  }
+
+  table {
+    display: block;
+    margin-left: auto;
+    text-align: left;
+  }
+
+  input[type="radio"] + label + br {
+    display: none;
+  }
+
+  header {
+    min-height: 470px;
+  }
+
+  header h1 {
+    font-size: 4em;
+  }
+
+  header h3 {
+    font-size: 2.1em;
+  }
+
+  .nav {
+    max-width: 1200px;
+    padding: 0 30px;
+  }
+
+
+  main {
+    padding-top: 20px;
+  }
+
+  main p {
+    line-height: 1.6em;
+  }
+
+  .card,
+  .tour{
+    margin: 40px auto;
+    padding: 20px 40px 40px;
+    width: 80%;
+    max-width: 1000px;
+  }
+
+  .photo{
+    width: 30%;
+    margin: 20px 30px;
+  }
+
+  .information{
+    text-align: left;
+  }
+
+  footer {
+    font-size: 1.3em;
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+}
