@@ -185,6 +185,7 @@ textarea + p {
 
 input[type="text"],
 input[type="email"],
+input[type="radio"],
 textarea,
 select {
   padding: 2px;
